@@ -6,10 +6,10 @@ PhysicsMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Course
+  m_Name: Base Course 4
   serializedVersion: 2
-  m_DynamicFriction: 10
-  m_StaticFriction: 10
+  m_DynamicFriction: 8
+  m_StaticFriction: 8
   m_Bounciness: 1
   m_FrictionCombine: 0
   m_BounceCombine: 0
