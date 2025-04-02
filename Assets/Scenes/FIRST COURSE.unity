@@ -5956,6 +5956,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33ff4ad0d0b9c904a83f1be679d29c8d, type: 3}
   m_PrefabInstance: {fileID: 2024898980}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2053556943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1807407740741488, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_Name
+      value: Hole Marker (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.739
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -79.458
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c009ae011bbe4094084329eed76808f0, type: 3}
 --- !u!1001 &2068559347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8305,6 +8362,63 @@ MonoBehaviour:
   m_Text: 'Kinematic
 
     Movement'
+--- !u!1001 &8917054492391015911
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1807407740741488, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_Name
+      value: Hole Marker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.71604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.650166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -52.99189
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966470365070544157, guid: c009ae011bbe4094084329eed76808f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c009ae011bbe4094084329eed76808f0, type: 3}
 --- !u!1001 &9014170783777442263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8525,3 +8639,5 @@ SceneRoots:
   - {fileID: 821462706}
   - {fileID: 2068559347}
   - {fileID: 1730239535}
+  - {fileID: 8917054492391015911}
+  - {fileID: 2053556943}
