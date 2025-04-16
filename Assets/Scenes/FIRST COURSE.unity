@@ -5759,14 +5759,46 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6387116795434993352, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Upper Rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: -5369979222382188145, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Lower Rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: -4502051279333878516, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Fairways
+      objectReference: {fileID: 0}
+    - target: {fileID: -3944845813081624403, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Rough
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
       propertyPath: m_Name
       value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363884203049041740, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Fringe of Greens
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755997851862919255, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Greens
       objectReference: {fileID: 0}
     - target: {fileID: 5136177685281922490, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6ee576e1459af164c892c5cc7397db54, type: 2}
+    - target: {fileID: 6702191677157434531, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Sand Bunkers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092297904928775625, guid: d4e5a4f7c89150a49b9e462da387f6e7, type: 3}
+      propertyPath: m_Name
+      value: Water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
