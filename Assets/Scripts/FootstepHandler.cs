@@ -6,8 +6,15 @@ public class FootstepHandler : MonoBehaviour
     [Header("Audio Settings")]
     public AudioSource audioSource;
 
-    public AudioClip fairwayGrassClip;
+    // Surface specific audio clips. 
     public AudioClip sandBunkerClip;
+    public AudioClip greenGrassClip;
+    public AudioClip fairwayGrassClip;
+    public AudioClip roughGrassClip;
+    public AudioClip lowerRocksClip;
+    public AudioClip upperRocksClip;
+
+    // Default audio clip. 
     public AudioClip defaultClip;
 
     // Variables for footstep timer settings. 
@@ -20,7 +27,7 @@ public class FootstepHandler : MonoBehaviour
 
     // Getting the position and getting audio source. 
     void Start()
-    {
+    {                                           
         lastPosition = transform.position;
 
         if (audioSource == null)
@@ -94,8 +101,20 @@ public class FootstepHandler : MonoBehaviour
                 case "Fairways":
                     audioSource.PlayOneShot(fairwayGrassClip);
                     break;
+                case "Greens":
+                    audioSource.PlayOneShot(greenGrassClip);
+                    break;
                 case "Sand Bunkers":
                     audioSource.PlayOneShot(sandBunkerClip);
+                    break;
+                case "Rough":
+                    audioSource.PlayOneShot(roughGrassClip);
+                    break;
+                case "Lower Rocks":
+                    audioSource.PlayOneShot(lowerRocksClip);
+                    break;  
+                case "Upper Rocks":
+                    audioSource.PlayOneShot(upperRocksClip);
                     break;
                 default:
                     audioSource.PlayOneShot(defaultClip);
