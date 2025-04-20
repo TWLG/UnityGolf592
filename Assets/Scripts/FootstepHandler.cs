@@ -31,6 +31,21 @@ public class FootstepHandler : MonoBehaviour
 
     void Update()
     {
+
+        // // Start the ray just in front of your headset
+        // Vector3 rayOrigin = Camera.main.transform.position + Camera.main.transform.forward * 0.5f;
+        // Vector3 rayDirection = Vector3.down * 3f;
+
+        // Debug.DrawLine(rayOrigin, rayOrigin + rayDirection, Color.red);
+
+        // // Testing code to see the players raycast in VR. 
+        // Vector3 rayOrigin = transform.position;
+        // Vector3 rayDirection = Vector3.down * 3f; // Change this to your desired length
+
+        // // Draw a line in the game world that can be seen during runtime
+        // Debug.DrawLine(rayOrigin, rayOrigin + rayDirection, Color.green);
+
+        // Check if the player is moving and update the footstep timer.
         if (IsMoving())
         { 
             footstepTimer -= Time.deltaTime;
@@ -67,9 +82,6 @@ public class FootstepHandler : MonoBehaviour
         // Tracking the players surface and movement via Vector3. 
         Vector3 rayOrigin = transform.position;
         RaycastHit hit;
-
-        // Visualize the ray in the Scene view (lasts 1 second) - TESTING CODE ONLY
-        Debug.DrawRay(rayOrigin, Vector3.down * 2f, Color.green, 1f);
 
         if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 3f))
         {
