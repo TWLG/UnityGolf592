@@ -52,18 +52,31 @@ public class FootstepHandler : MonoBehaviour
     {
         // Checks to see if the player has moved. 
         float movedDistance = Vector3.Distance(transform.position, lastPosition);
-        lastPosition = transform.position;
-        return movedDistance > 0.01f; // You can tweak this sensitivity
+        if (movedDistance > 0.01f)
+        {
+            // If the player has moved, update the last position. 
+            lastPosition = transform.position;
+            return true;
+        }
+
+        return false;
     }
 
     void PlayFootstepSound()
     {
         // Tracking the players surface and movement via Vector3. 
-        Vector3 rayOrigin = transform.position - new Vector3(0f, 0.5f, 0f); // Raycast from a bit below the object
+        Vector3 rayOrigin = transform.position;
         RaycastHit hit;
 
-        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 2f))
+        // Visualize the ray in the Scene view (lasts 1 second) - TESTING CODE ONLY
+        Debug.DrawRay(rayOrigin, Vector3.down * 2f, Color.green, 1f);
+
+        if (Physics.Raycast(rayOrigin, Vector3.down, out hit, 3f))
         {
+
+            // TESTING CODE ONLY 
+            Debug.Log($"Raycast hit: {hit.collider.name}, Tag: {hit.collider.tag}");
+
             switch (hit.collider.tag)
             {
                 case "Fairways":
