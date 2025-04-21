@@ -10,6 +10,7 @@ public class FootstepHandler : MonoBehaviour
     public AudioClip sandBunkerClip;
     public AudioClip greenGrassClip;
     public AudioClip fairwayGrassClip;
+    public AudioClip fringeGrassClip;
     public AudioClip roughGrassClip;
     public AudioClip lowerRocksClip;
     public AudioClip upperRocksClip;
@@ -103,6 +104,9 @@ public class FootstepHandler : MonoBehaviour
                     break;
                 case "Greens":
                     audioSource.PlayOneShot(greenGrassClip);
+                    break;
+                case "Fringe of Greens":
+                    audioSource.PlayOneShot(fringeGrassClip);
                     break;
                 case "Sand Bunkers":
                     audioSource.PlayOneShot(sandBunkerClip);
