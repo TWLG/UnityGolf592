@@ -8,20 +8,11 @@ public class GameManager : MonoBehaviour
     public UIController ui;
 
     public int strokes = 0;
-    public int totalHoles = 1; // Start at 1 instead of 0
+    public int totalHoles;
 
     public List<int> strokesPerHole = new List<int>();
 
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    private void Start()
-    {
-        // Update the UI to reflect the initial hole number
-        ui.UpdateHoleNumber(totalHoles);
-    }
+    private void Awake() => Instance = this;
 
     public void AddStroke()
     {
@@ -32,14 +23,15 @@ public class GameManager : MonoBehaviour
     public void AddHoleCount()
     {
         totalHoles++;
-        ui.UpdateHoleNumber(totalHoles); // Update the hole number in the UI
+        ui.UpdateHoleNumber(totalHoles); // Update the stroke count in the UI
     }
 
     public void HoleCompleted(bool finalHole = false)
     {
         strokesPerHole.Add(strokes);
 
-        if (finalHole || !holeManager.MoveToNextHole())
+
+        if (finalHole)
         {
             ShowFinalScore();
         }
@@ -47,15 +39,16 @@ public class GameManager : MonoBehaviour
         {
             strokes = 0; // Reset for the next hole
             ui.UpdateStrokeCount(strokes); // Update the stroke count in the UI
-            AddHoleCount();
+            ui.UpdateHoleNumber(totalHoles); // Update the hole number in the UI
+            holeManager.MoveToNextHole();
         }
     }
 
     public void ShowFinalScore()
     {
         Debug.Log("Game Over! Final Score: " + GetTotalStrokes());
-        // ui.ShowFinalScorePanel(strokesPerHole); // pass total strokes
-        // HighScoreManager.Instance.CheckHighScore(GetTotalStrokes());
+        //ui.ShowFinalScorePanel(strokesPerHole); // pass total strokes
+        //HighScoreManager.Instance.CheckHighScore(GetTotalStrokes());
     }
 
     public int GetTotalStrokes()
