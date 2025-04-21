@@ -14,11 +14,22 @@ public class GameManager : MonoBehaviour
 
     private void Awake() => Instance = this;
 
-    public void AddStroke() => strokes++;
+    public void AddStroke()
+    {
+        strokes++;
+        ui.UpdateStrokeCount(strokes); // Update the stroke count in the UI
+    }
+
+    public void AddHoleCount()
+    {
+        totalHoles++;
+        ui.UpdateHoleNumber(totalHoles); // Update the stroke count in the UI
+    }
 
     public void HoleCompleted(bool finalHole = false)
     {
         strokesPerHole.Add(strokes);
+
 
         if (finalHole)
         {
@@ -26,15 +37,18 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            strokes = 0; // reset for next hole
+            strokes = 0; // Reset for the next hole
+            ui.UpdateStrokeCount(strokes); // Update the stroke count in the UI
+            ui.UpdateHoleNumber(totalHoles); // Update the hole number in the UI
             holeManager.MoveToNextHole();
         }
     }
 
     public void ShowFinalScore()
     {
-        ui.ShowFinalScorePanel(strokesPerHole); // pass total strokes
-        HighScoreManager.Instance.CheckHighScore(GetTotalStrokes());
+        Debug.Log("Game Over! Final Score: " + GetTotalStrokes());
+        //ui.ShowFinalScorePanel(strokesPerHole); // pass total strokes
+        //HighScoreManager.Instance.CheckHighScore(GetTotalStrokes());
     }
 
     public int GetTotalStrokes()

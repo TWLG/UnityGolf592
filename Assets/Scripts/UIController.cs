@@ -1,11 +1,15 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro; // Add this import
+
 
 public class UIController : MonoBehaviour
 {
-    public Text strokeText;
-    public Text holeText;
+    // public Text strokeText;
+    // public Text holeText;
+    public TMP_Text strokeText; // Change Text to TMP_Text
+    public TMP_Text holeText;
 
     public void ShowFinalScorePanel(List<int> strokesPerHole)
     {
@@ -27,11 +31,11 @@ public class UIController : MonoBehaviour
 
     public void UpdateStrokeCount(int strokes)
     {
-        strokeText.text = "Strokes: " + strokes;
+        strokeText.text = strokes.ToString();
     }
 
     public void UpdateHoleNumber(int hole)
     {
-        holeText.text = "Hole: " + hole;
+        holeText.text = hole.ToString();
     }
 }

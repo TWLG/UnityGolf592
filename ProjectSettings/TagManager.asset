@@ -12,6 +12,7 @@ TagManager:
   - Lower Rocks
   - Upper Rocks
   - Water
+  - Ball
   layers:
   - Default
   - TransparentFX
