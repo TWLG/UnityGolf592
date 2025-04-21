@@ -6,10 +6,10 @@ PhysicsMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Course 7
+  m_Name: Greens Surface Material
   serializedVersion: 2
-  m_DynamicFriction: 2
-  m_StaticFriction: 2
+  m_DynamicFriction: 4
+  m_StaticFriction: 4
   m_Bounciness: 1
   m_FrictionCombine: 1
   m_BounceCombine: 0
