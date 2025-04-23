@@ -1130,13 +1130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4391713d69e890d44b0db8767fa6aab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teePoints:
-  - {fileID: 1716377834}
-  - {fileID: 189247595}
-  - {fileID: 1437644751}
-  - {fileID: 621933545}
-  - {fileID: 548381314}
-  ball: {fileID: 1582280163}
+  ballPositions: []
+  playerPositions: []
+  ballPrefab: {fileID: 0}
+  player: {fileID: 0}
+  golfClubPrefab: {fileID: 0}
 --- !u!4 &213820267
 Transform:
   m_ObjectHideFlags: 0
@@ -6375,6 +6373,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!64 &1582280178
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582280163}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1584752560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8186e76aed960ab4cb356a9bff4b174a, type: 3}
@@ -11028,6 +11048,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3093648966843711004, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1582280177}
+    - targetCorrespondingSourceObject: {fileID: 3093648966843711004, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1582280178}
   m_SourcePrefab: {fileID: 100100000, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
 --- !u!1001 &6429121471002714783
 PrefabInstance:
