@@ -6369,7 +6369,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -6392,9 +6392,9 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: bed5f67b9094add47a6293f40d3c84a3, type: 3}
 --- !u!4 &1584752560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8186e76aed960ab4cb356a9bff4b174a, type: 3}
@@ -10986,6 +10986,18 @@ PrefabInstance:
     - target: {fileID: 4749112883558445312, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501873995637758996, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501873995637758996, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501873995637758996, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6501873995637758996, guid: 437e99432d9f01c4ba90d7fd3e21028a, type: 3}
       propertyPath: m_LocalPosition.x
