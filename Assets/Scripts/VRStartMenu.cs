@@ -7,14 +7,13 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class VRStartMenu : MonoBehaviour
 {
     public Button startButton;
-    public Button settingsButton;
     public Button exitButton;
     public GameObject settingsPanel; // need to find out what settings we are allowing, if not change or delete
     
     void Start()
     {
         startButton.onClick.AddListener(StartGame);
-        settingsButton.onClick.AddListener(ToggleSettings);
+       
         exitButton.onClick.AddListener(ExitGame);
     }
     
@@ -28,19 +27,26 @@ public class VRStartMenu : MonoBehaviour
 	
     }
 
-    void ToggleSettings()
-    {
-        settingsPanel.SetActive(!settingsPanel.activeSelf);
-    }
+    
 
+    //   void ExitGame()
+    //   {
+
+    //UnityEditor.EditorApplication.isPlaying = false;
+
+    ////Application.Quit();
+
+
+    //   }
     void ExitGame()
     {
-        
-	UnityEditor.EditorApplication.isPlaying = false;
-	
-	//Application.Quit();
-		
-		
+        Debug.Log("Exit button clicked");
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
     }
 }
 

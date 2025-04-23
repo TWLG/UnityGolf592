@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 50a459f9b3f35d749ae9927cb0c7a4b6
   m_SerializeEntries:
+  - m_GUID: bc9559bf53881cc47a54fe8ed7ffe3dc
+    m_Address: Assets/Sound Design/Music
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d98776fb89144594aaf00035e9b9a11c
     m_Address: Assets/Scenes/FIRST COURSE.unity
     m_ReadOnly: 0
