@@ -6,16 +6,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public HoleManager holeManager;
     public UIController ui;
+    public GameObject ballPrefab;        // assign your ball prefab here
 
     public int strokes = 0;
     public int totalHoles = 1; // Start at 1 instead of 0
 
     public List<int> strokesPerHole = new List<int>();
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+    private void Awake() => Instance = this;
 
     private void Start()
     {
@@ -73,5 +71,20 @@ public class GameManager : MonoBehaviour
     void TestAddStroke()
     {
         AddStroke();
+    }
+
+    /// <summary>
+    /// Called by BallController when it hits water.
+    /// Destroys the current ball and respawns a new one at lastStoppedPos.
+    /// </summary>
+    public void ResetBall(Vector3 lastStoppedPos)
+    {
+
+        var oldBall = GameObject.FindWithTag("Ball");
+        if (oldBall != null) Destroy(oldBall);
+
+        var newBall = Instantiate(ballPrefab, lastStoppedPos, Quaternion.identity);
+        newBall.tag = "Ball";
+        Debug.Log($"[GameManager] Ball respawned at {lastStoppedPos}");
     }
 }

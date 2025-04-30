@@ -5,8 +5,11 @@ public class BallController : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 lastStoppedPos;
-    [Tooltip("When below this speed we consider the ball stopped.")]
     public float stopThreshold = 0.1f;
+
+    [Tooltip("Seconds between valid club‐hit strokes")]
+    public float hitCooldown = 1f;
+    float lastHitTime = -Mathf.Infinity;
 
     void Start()
     {
@@ -16,38 +19,35 @@ public class BallController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // record position when ball is effectively stopped
         if (rb.linearVelocity.magnitude < stopThreshold)
             lastStoppedPos = transform.position;
     }
 
     void OnCollisionEnter(Collision col)
     {
+        Debug.Log($"[BallController] Collided with {col.gameObject.name} (Tag={col.gameObject.tag})");
+
         if (col.gameObject.CompareTag("Club"))
         {
-            lastStoppedPos = transform.position;
-            GameManager.Instance.AddStroke();
+            // only count a hit if enough time has passed
+            if (Time.time - lastHitTime >= hitCooldown)
+            {
+                lastStoppedPos = transform.position;
+                lastHitTime = Time.time;
+                GameManager.Instance.AddStroke();
+                Debug.Log($"[BallController] Stroke added (cooldown ok)");
+            }
+            else
+            {
+                Debug.Log($"[BallController] Hit ignored (cooldown): {Time.time - lastHitTime:F2}s");
+            }
         }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        // reset‐hazard marker
-        if (other.GetComponent<ResetHazard>() != null)
+        else if (col.gameObject.CompareTag("Water"))
         {
-            ResetToLastStoppedPos();
-            return;
+            Debug.Log("[BallController] Hit water – asking GameManager to reset");
+            GameManager.Instance.ResetBall(lastStoppedPos);
         }
-
-        // legacy water tag
-        if (other.CompareTag("Water"))
-            ResetToLastStoppedPos();
     }
 
-    void ResetToLastStoppedPos()
-    {
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        transform.position = lastStoppedPos;
-    }
+    public Vector3 GetLastStoppedPos() => lastStoppedPos;
 }
