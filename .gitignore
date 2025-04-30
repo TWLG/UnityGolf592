@@ -75,3 +75,5 @@ ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/ShaderGraphSettings.asset
 .vsconfig
 /.vscode
+
+.fake

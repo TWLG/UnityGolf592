@@ -65,4 +65,13 @@ public class GameManager : MonoBehaviour
             total += s;
         return total;
     }
+
+    /// <summary>
+    /// Call this from the Inspector context menu to test adding a stroke.
+    /// </summary>
+    [ContextMenu("Test Add Stroke")]
+    void TestAddStroke()
+    {
+        AddStroke();
+    }
 }
