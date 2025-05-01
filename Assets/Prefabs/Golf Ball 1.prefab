@@ -195,3 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopThreshold: 0.1
+  hitCooldown: 1
+  tracerMaterial: {fileID: 2100000, guid: 0afa947297939c64aae994328d9ff410, type: 2}
+  tracerTime: 1
+  tracerStartWidth: 0.05
+  tracerEndWidth: 0

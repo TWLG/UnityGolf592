@@ -11,6 +11,27 @@ public class BallController : MonoBehaviour
     public float hitCooldown = 1f;
     float lastHitTime = -Mathf.Infinity;
 
+    [Header("Tracer Settings")]
+    [SerializeField] Material tracerMaterial;
+    [SerializeField] float tracerTime = 1f;
+    [SerializeField] float tracerStartWidth = 0.05f;
+    [SerializeField] float tracerEndWidth = 0f;
+
+    TrailRenderer trail;
+
+    void Awake()
+    {
+        // ensure there's a TrailRenderer
+        trail = GetComponent<TrailRenderer>();
+        if (trail == null)
+            trail = gameObject.AddComponent<TrailRenderer>();
+
+        trail.time = tracerTime;
+        trail.startWidth = tracerStartWidth;
+        trail.endWidth = tracerEndWidth;
+        trail.material = tracerMaterial;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
