@@ -7,12 +7,14 @@ public class HoleManager : MonoBehaviour
     public GameObject ballPrefab;      // Prefab for the ball
     public GameObject player;
     public GameObject golfClubPrefab;  // Prefab for the golf club
+    public GameObject[] holeFlags;     // Add references to each hole’s flag GameObject
 
     private GameObject currentGolfClub; // Reference to the currently active golf club
     private int currentHoleIndex = 0;
 
     void Start()
     {
+        UpdateHoleFlags();
         SpawnBallAtHole(currentHoleIndex);
         SpawnGolfClubAtHole(currentHoleIndex);
         MovePlayerToHole(currentHoleIndex);
@@ -29,10 +31,17 @@ public class HoleManager : MonoBehaviour
 
         DeleteAllBalls(); // Delete all existing balls
         DeleteGolfClub(); // Delete the existing golf club
+        UpdateHoleFlags();
         SpawnBallAtHole(currentHoleIndex);
         SpawnGolfClubAtHole(currentHoleIndex);
         MovePlayerToHole(currentHoleIndex);
         return true; // Successfully moved to the next hole
+    }
+
+    void UpdateHoleFlags()
+    {
+        for (int i = 0; i < holeFlags.Length; i++)
+            holeFlags[i].SetActive(i == currentHoleIndex);
     }
 
     void SpawnBallAtHole(int index)
@@ -69,7 +78,6 @@ public class HoleManager : MonoBehaviour
         currentGolfClub = Instantiate(golfClubPrefab, clubPosition, Quaternion.identity);
         Debug.Log($"Spawned a new golf club beside the hole at hole {index + 1}");
     }
-
 
     void MovePlayerToHole(int index)
     {
