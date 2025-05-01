@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour
     public void ShowFinalScore()
     {
         Debug.Log("Game Over! Final Score: " + GetTotalStrokes());
-        // ui.ShowFinalScorePanel(strokesPerHole); // pass total strokes
-        // HighScoreManager.Instance.CheckHighScore(GetTotalStrokes());
+        // show UI panel instead of only logging
+        ui.ShowFinalScorePanel(strokesPerHole);  // ↳ Assets/Scripts/UIController.cs
     }
 
     public int GetTotalStrokes()
