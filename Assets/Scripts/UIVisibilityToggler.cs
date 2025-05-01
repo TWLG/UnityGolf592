@@ -9,6 +9,13 @@ public class UIVisibilityToggler : MonoBehaviour
     [Header("Parent of all UI elements to hide/show")]
     public GameObject uiContainer;
 
+    void Awake()
+    {
+        // ensure UI is hidden by default
+        if (uiContainer != null)
+            uiContainer.SetActive(false);
+    }
+
     void OnEnable()
     {
         toggleMenuAction.action.performed += OnToggleMenu;
